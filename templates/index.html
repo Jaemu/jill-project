@@ -1,0 +1,174 @@
+<html>
+	<head>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://code.createjs.com/createjs-2013.12.12.min.js"></script>
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style>
+			@import url(http://fonts.googleapis.com/css?family=Medula+One);
+			@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,300);
+			body{
+				overflow-y: hidden;
+				background-color: #f0f0f0;
+				background-repeat: no-repeat;
+				background-size: cover;
+				font: 16px/26px Helvetica, Helvetica Neue, Arial;
+				min-height:1000px;
+			}
+			i{
+				color: #115E76;
+			}
+
+			ul, li{
+				display:inline-block;
+				list-style: none;
+			}
+			.container{
+				min-width: 95%;
+				min-height: 90%;
+				padding:2%;
+			}
+			.clearfix:before,
+			.clearfix:after {
+			    content: " ";
+			    display: table;
+			}
+
+			.clearfix:after {
+			    clear: both;
+			}
+
+			.clearfix {
+			    *zoom: 1;
+			}
+			.example{
+				color: #7B5800;
+				text-align: center;
+				font-size: 2em;
+				line-height: 1.2;
+				max-width: 500px;
+				margin: 0 auto;
+			}
+			.fancy{
+				font-family: 'Roboto Slab', serif;
+			}
+			.footer{
+				background: #88E1FC;
+				opacity: .8;
+				clear: both;
+				text-align: center;
+				border: solid 4px #115E76;
+				max-height: 100px;
+				position:static;
+				bottom:0;
+				left:0;
+				width:100%;
+			}
+			.canvas-container{
+				box-shadow: 0px 5px 3px 3px #ccc;
+				max-height: 80%;
+				min-height:60%;
+				min-width: 100%;
+				margin: 0 auto;
+				clear: both;
+				float: center;
+				background: transparent url(https://farm3.staticflickr.com/2179/2178246332_de07c10d6f_m.jpg) no-repeat center center;
+				-webkit-background-size:cover;
+				cursor: pointer;
+			);
+			}
+			.list{
+				list-style: none;
+				text-align: left;
+			}
+			.start-button{
+				margin: 0 auto;
+				background: #39C25B;
+				border-radius: 30px;
+				font-size: 2em;
+				width: 30%;
+				height: 10%;
+				float: center;
+				text-align: center;
+				position: relative;
+			}
+			.start-text{
+				padding: 8% 0;
+			}
+
+			.carousel-container{
+				width:94%;
+				margin: 10px auto 10px auto;
+				max-height:120px;
+				border: solid 2px #000;
+				clear: both;
+				float: center;
+				box-shadow: inset 1px 1px 10px #777777;
+				overflow-x:scroll;
+				overflow-y:hidden;
+
+			}
+			.carousel-pictures{
+				max-height: 120px;
+				overflow-x: auto;
+				overflow-y:hidden;
+				width:auto;
+				margin:0 !important;
+				min-width:200%;
+			}
+			.image{
+				width:100px;
+				height:100px;
+				background: transparent url(https://farm3.staticflickr.com/2179/2178246332_de07c10d6f_m.jpg) no-repeat center center scroll;
+				background-size: 100px 100px;
+				-webkit-background-size: cover;
+				margin: 10px;
+				-webkit-transition: all .5s ease 0s;
+
+			}
+			.image:hover{
+				-ms-transform: scale(1.1,1.1); /* IE 9 */
+		    -webkit-transform: scale(1.1,1.1); /* Chrome, Safari, Opera */
+				transform: scale(1.1,1.1);
+				opacity: .5;
+			}
+			.prompt-text{
+				text-align:center;
+				width:100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container clearfix">
+			<div class="canvas-container">
+				<canvas id="canvas"></canvas>
+			</div>
+				<div class="carousel-prompt">
+					<h3 class="prompt-text">Guess which painting?</h3>
+				</div>	
+				<div class="carousel-container clearfix" id="carousel">
+					<ul class="carousel-pictures">
+						<li id="image_1" class="image"></li>
+						<li id="image_2" class="image"></li>
+						<li id="image_3" class="image"></li>
+						<li id="image_4" class="image"></li>
+						<li id="image_5" class="image"></li>
+						<li id="image_6" class="image"></li>
+						<li id="image_7" class="image"></li>
+						<li id="image_8" class="image"></li>
+						<li id="image_9" class="image"></li>
+						<li id="image_10" class="image"></li>
+						<li id="image_11" class="image"></li>
+						<li id="image_12" class="image"></li>
+					</ul>
+				</div>
+		</div>
+		<footer>
+			<div class="footer clearfix fancy">
+				<h2>(insert footer links here)</h2>
+			</div>
+		</footer>
+		<script src='/js/mpiece.js'></script>
+	</body>
+
+</html>
